@@ -5,6 +5,14 @@
 // Author: Guilherme R. Lampert
 // Created on: 22/11/15
 // Brief: GLProxy intercepts all calls to the real OpenGL library.
+//
+// Source code licensed under the MIT license.
+// Copyright (C) 2015 Guilherme R. Lampert
+//
+// This software is provided "as is" without express or implied
+// warranties. You may freely copy and compile this source into
+// applications you distribute provided that this copyright text
+// is included in the resulting source code.
 // ================================================================================================
 
 // Trim down the WinAPI crap. We also don't want WinGDI.h
@@ -698,7 +706,7 @@ GLFUNC_8_WRET(BOOL,  wglUseFontOutlinesW, HDC, hdc, DWORD, b, DWORD, c, DWORD, d
 
 //
 // wglGetProcAddress is a special case. We also want to log
-// which extensions got dynamically loaded by the application. 
+// which extensions got dynamically loaded by the application.
 //
 GLPROXY_EXTERN PROC GLPROXY_DECL wglGetProcAddress(LPCSTR funcName)
 {
